@@ -90,6 +90,19 @@ The bridge itself should now be running.
 
 To actually use it, you will need to configure some linked channels.
 
+Docker Setup
+------------
+
+```sh
+docker build -t slackbridge .
+```
+
+Generate a registration file and output it locally. $HOST can be the container name if the container is on the same docker network as the synapse server.
+```sh
+docker run --rm -it --entrypoint "" registry.a8.network/slackbridge:latest /bin/ash -c "node app.js -r -c config.yaml -u 'http://$HOST:$MATRIX_PORT' && cat /usr/src/app/matrix-appservice-slack/slack-registration.yaml" > ../slack-registration.yaml
+```
+This needs to be added to the synapse config. It also needs to be mounted into the slackbridge container or the container will fail to start. 
+
 Provisioning
 ------------
 

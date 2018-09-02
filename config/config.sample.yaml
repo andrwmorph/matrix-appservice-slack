@@ -2,6 +2,7 @@ slack_hook_port: 9898
 inbound_uri_prefix: "https://my.server.here:9898/"
 bot_username: "slackbot"
 username_prefix: "slack_"
+dbdir: "/databaselocation/"
 
 # Optional
 slack_master_token: "abc-123-def"
@@ -11,6 +12,7 @@ matrix_admin_room: "!aBcDeF:matrix.org"
 
 homeserver:
   url: http://localhost:8008
+  urlexternal: "https://image.my.server.here/"
   server_name: my.server
 
 # Optional
