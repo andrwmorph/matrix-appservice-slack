@@ -12,7 +12,7 @@ matrix_admin_room: "!aBcDeF:matrix.org"
 
 homeserver:
   url: http://localhost:8008
-  urlexternal: "https://image.my.server.here/"
+  media_url: "https://image.my.server.here/"
   server_name: my.server
 
 # Optional
